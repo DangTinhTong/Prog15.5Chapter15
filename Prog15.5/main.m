@@ -34,7 +34,41 @@ int main(int argc, const char * argv[]) {
         //Or can use appendString directly
         [myString appendString:@"and String C"];
         NSLog(@"%@",myString);
+     
         
+        // Delete substring based on range
+        [myString deleteCharactersInRange:NSMakeRange(16, 13)];
+        NSLog(@"%@",myString)   ;
+        
+        // Find range first and them use it for deletion
+       // subString = [myString rangeOfString: @"string B and"];
+        
+        
+        //subString = [myString rangeOfString:@"string B and"];
+        
+        
+        // Set the mutable string derectly
+        [myString setString:@"This is string A"];
+        NSLog(@"%@",myString);
+        
+        
+        //Now let's repalace a range of chars with another
+        [myString replaceCharactersInRange: NSMakeRange(8,8) withString:@" a mutable string"];
+        NSLog(@"%@",myString);
+        
+        // Search and replace s
+        
+        
+        search = @"This is";
+        replace = @"An example of";
+        
+       // subString  = [myString rangeOfString:search]
+       // if (subString.lo)
+      //
     }
+    
+    
+    
+    
     return 0;
 }
